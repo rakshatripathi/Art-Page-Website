@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    padding: 0%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'content content content'
+    'footer footer footer' ;
+    grid-template-columns: 1fr 4fr 1fr ;
+    grid-template-rows: 80px 1fr 70px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Global*/
+.container {
+    width: 90%;
+    height: fit-content;
+    margin: 0;
+    overflow:hidden;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header{
+    background: #3e6e8d;
+    color: #ffffff;
+    border-bottom: #3e6e8d 3px solid;
+    height: fit-content;
+}
+
+header h1 {
+    display: flex;
+    align-items:flex-start;
+    padding:0;
+    margin: 0;
+
+}
+
+header h1 a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 29px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+header h1 img{
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+header a{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 0;
+    
+}
+
+header li{
+    float:left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+   float: left ;
+}
+
+header #branding h1{
+    margin: 0;
+    padding: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight{
+    color:#fff;
+    font-weight:bold;
+    padding-left: 20px;
+    padding-top: 0px;
+}
+
+header .current a{
+    color:#c79c9c;
+    font-weight:bold;
+    text-decoration: underline;
+  
+}
+
+header h1 a:hover{
+    color:#fff;
+    text-decoration: none;
+   
+}
+
+header a:hover{
+    color:#cccccc;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*showcase */
+
+#showcase{
+    min-height: 250px;
+    padding-left: 20px;
+    padding:0;
+    margin: 0;
+    color:#000 ;
+    border-bottom: #141a1f 3px solid;
+    background-image: url(../IMG/paint-girl.jpg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right;
+
+  
+}
+
+#showcase h1{
+    margin-top: 30px;
+    font-size: 50px;
+  
+
+}
+
+#showcase p{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 30px;
+}
+
+a{
+    color: #fff;
+    font-style: normal;
+}
+
+header,
+footer,
+main,
+aside{
+    color:#fff;
+    padding: 20px;
+   
+}
+
+header{
+    grid-area: header;
+    background: rgb(134, 36, 87);}
+
+main{
+    grid-area: content;
+    background: #fff;
+    color:#000;
+   
+}
+
+
+aside{
+    grid-area: content ;
+    background: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 30px;
+    
+}
+
+footer{
+    grid-area: footer;
+    background: rgb(134, 36, 87);
+    text-align: center;
+}
+
+    
+
+#intro .welcome{
+    margin-top: 20px;
+    padding: 20px;
+    padding-bottom: 10px;
+    line-height: 2;
+    width: 100%;
+    text-align: justify;
+}
+
+
+#blog .post{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: #3e6e8d 3px solid;
+    line-height: 1.7;
+    text-align: justify;
+    color: #000;
+    background: #dfa1bd;
+}
+
+
+#blog .post a{
+    color: #ffffff; 
+    background: rgb(134, 36, 87);
+    padding: 4px;
+    border-radius: 5%;
+}
+
+#blog .post h1{
+    color: #0d0f0f;   
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+#blog .post  a:hover{
+    color:#090808;
+}
+
+
+#blog .post a:hover{
+    color:#57cfcf;
+    font-weight: bold;
+}
+
+@media (max-width:1080px) {
+
+    aside{
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 5px;
+    }
+    
+    header{
+        font-size: auto;
+        padding: 0;
+        margin: 0;
+        min-height: 150px;
+        width: 100%;
+
+    }
+
+    header a{
+        font-size:medium;
+        height: auto;
+    } 
+
+    
+    header #branding {
+       float: left ;
+    }
+    
+    header nav{
+        float: right;
+        margin:auto;
+
+    }
+
+    #showcase h1{
+        font-size:30px;
+        margin:0
+
+    }
+    #showcase p{
+        padding-left: 0;
+        font-size: medium;
+    }
+
+    #showcase{
+        min-height: 200px;
+        background-image: url(../IMG/paint-girl.jpg);
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: bottom right;
+      
+    }
+}   
